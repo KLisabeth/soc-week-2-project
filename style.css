@@ -5,19 +5,18 @@ section {
 }
 
 button {
-    display: flex;
-    height: 33px;
-    height: 44px;
-    margin: 20px;
-    width: 200px;
-    font-size: 14px;
-    line-height: 1.3;
-    align-items: center;
-    justify-content: center;
+    font-size: 17px;
+    position: relative;
+    box-sizing: content-box;
+    outline: none;
+    margin: 25px;
+    padding: 12px 16px;
     background-color: #615fff;
-    border-color: #316fff;
+    border-color: transparent;
     box-sizing: border-box;
     font-weight: normal;
     border-radius: 7px;
-    color: #eee;
-}
+    display: inline-block;
+    border-radius: 4px;
+    color: #eeeeee;
+}    
