@@ -1,8 +1,14 @@
 console.log('madlib script has loaded');
 
 // write this function!
-function madlib() {
-
+ function madlib(Noun, Verb, Adj) { 
+   if (Noun.length > Verb.length) { 
+    text= 'the '+ Adj + ' ' + Noun + ' loves to ' + Verb + ' in the summer';
+  }
+  else if (Verb.length > Noun.length){
+    text = 'when the '+ Adj + ' rain falls, ' +  Noun + ' begins to ' + Verb;
+  }
+  return text;
 }
 
 // if the noun is longer than the verb
