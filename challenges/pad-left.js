@@ -2,8 +2,19 @@ console.log('padLefts script has loaded');
 
 // write this function!
 function padLeft(string, length) {
-}
+ if (string.length >= length) {
+    return string;
+  }
 
+ else {
+  var left = '';
+  const iterations = length - string.length;
+  for (let i = 0; i < iterations; i++) {
+    left += "-";
+  }
+  return left+string;
+ }
+}
 // if the string is already as long as or longer than the length
 console.assert(padLeft('farenheit', 3) === 'farenheit', 'first');
 console.assert(padLeft('celcius', 7) === 'celcius', 'second');
@@ -16,20 +27,21 @@ console.assert(padLeft('computers', 10) === '-computers', 'sixth');
 
 
 function padLeftHandler() {
+  debugger;
   // prompt the user for a noun, verb and adjective
   const userString = prompt('enter a string to pad');
 
   const userLengthStr = prompt('what is the shortest this string should be?');
   // cast userLengthStr to a Number, and assign the value to userLength
-
+  const userLength = Number(userLengthStr);
   console.assert(typeof userLength === 'number', "don't forget to cast userLength to a string!");
-
+  
   // perform core logic
   // write this line!
-
+  const result = padLeft(userString, userLength);
   // alert result for the user
   // write this line!
-
+  alert(result);
   // log action for the developer
   console.log('\n--- padLeft ---');
   console.log('userString:', '(' + typeof userString + '),', userString);
