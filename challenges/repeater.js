@@ -1,7 +1,8 @@
 console.log('repeater script has loaded');
 
 // write this function!
-function repeater() {
+function repeater(userStr, userNum) {
+  return (userStr + '\n').repeat(userNum);
 }
 
 console.assert(repeater('horse', 2) === 'horse\nhorse\n', 'first');
@@ -16,12 +17,12 @@ function repeaterHandler() {
   const userPhrase = prompt('enter a phrase');
   const userNumStr = prompt('enter a num');
   // cast userNumStr to a Number, and assign the value to userNum
-
+  const userNum = Number(userNumStr);
   console.assert(typeof userNum === 'number', "don't forget to cast userNumStr to a number!");
 
   // perform core logic
   const result = repeater(userPhrase, userNum);
-
+  debugger;
   // alert result for the user
   alert(result);
 
